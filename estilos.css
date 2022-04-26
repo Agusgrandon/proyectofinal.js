@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: linear-gradient(to right, #dcdcdc, white, #dcdcdc);
+    background-image: linear-gradient(to right, #dcdcdc, white, white, #dcdcdc);
     width: 100%;
     height: 100vh;
 }
