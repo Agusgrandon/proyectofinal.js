@@ -21,9 +21,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse col-xs-6 col-md-12 col-lg-12" id="navbarNav">
-                    <ul class="navbar-nav col-xs-6 col-sm-10 col-md-12 col-lg-12 d-flex flex-wrap justify-content-center">
+                    <ul
+                        class="navbar-nav col-xs-6 col-sm-10 col-md-12 col-lg-12 d-flex flex-wrap justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: black;" href="./prueba.html">Seccion 1</a>
+                            <a class="nav-link active" style="color: black;" href="#">Seccion 1</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" style="color: black;" href="#">Seccion 2</a>
@@ -43,8 +44,7 @@
                     aria-expanded="false">
                     <img src="./img/carrito/79467.png" alt="" style="width: 2em; height: 2em;">
                 </button>
-                <ul class="dropdown-menu dropdown-menu-end mb-3 border" id="carrito"
-                    aria-labelledby="dropdownMenuButton1">
+                <ul class="dropdown-menu dropdown-menu-end mb-3 border" aria-labelledby="dropdownMenuButton1">
                     <p class="textoCarrito" style="color: black;">Carrito</p>
                     <div id="lista"></div>
                     <p id="total"></p>
@@ -55,74 +55,16 @@
             </div>
         </nav>
     </header>
-    <br> 
+    <br>
     <main class="container">
+        <!-- card para insertar desde js -->
         <div class="row">
             <h2 class="col-xs-6 col-md-12">Productos</h2>
-            <!-- empiezan las cards -->
-            <div class="col-xs-6 col-sm-10 col-md-12 col-lg-12 d-flex flex-wrap justify-content-around">
-                <!-- card uno -->
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/celulares/CGG_Samsung-Galaxy-A52.jpg" class="card-img-top" alt="celular">
-                    <div class="card-body">
-                        <h5 class="card-title" id="celular">Celular Samsung A52</h5>
-                        <p class="card-text" id="precio">$72.000</p>
-                        <button class="btn btn-dark" id="boton">Agregar al carrito</button>
-                    </div>
-                </div> 
-                <!-- card dos -->
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/celulares/CGG_Samsung-Galaxy-A52.jpg" class="card-img-top" alt="celular">
-                    <div class="card-body" id="agregarProducto">
-                        <h5 class="card-title">Celular Samsung A52</h5>
-                        <p class="card-text">$72.000</p>
-                        <a href="#" class="btn btn-dark">Agregar al carrito</a>
-                    </div>
-                </div>
-                <!-- card tres -->
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/celulares/CGG_Samsung-Galaxy-A52.jpg" class="card-img-top" alt="celular">
-                    <div class="card-body" id="agregarProducto">
-                        <h5 class="card-title">Celular Samsung A52</h5>
-                        <p class="card-text">$72.000</p>
-                        <a href="#" class="btn btn-dark">Agregar al carrito</a>
-                    </div>
-                </div>
-
-                <!-- card cuatro -->
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/celulares/Samsung-Galaxy-A73-600x600 (1).jpg" class="card-img-top" alt="celular">
-                    <div class="card-body" id="agregarProducto">
-                        <h5 class="card-title">Celular Samsung A73</h5>
-                        <p class="card-text">$80.000</p>
-                        <a href="#" class="btn btn-dark">Agregar al carrito</a>
-                    </div>
-                </div>
-                <!-- card cinco -->
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/celulares/Samsung-Galaxy-A73-600x600 (1).jpg" class="card-img-top" alt="celular">
-                    <div class="card-body" id="agregarProducto">
-                        <h5 class="card-title">Celular Samsung A73</h5>
-                        <p class="card-text">$80.000</p>
-                        <a href="#" class="btn btn-dark">Agregar al carrito</a>
-                    </div>
-                </div>
-                <!-- card seis -->
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/celulares/Samsung-Galaxy-A73-600x600 (1).jpg" class="card-img-top" alt="celular">
-                    <div class="card-body" id="agregarProducto">
-                        <h5 class="card-title">Celular Samsung A73</h5>
-                        <p class="card-text">$80.000</p>
-                        <a href="#" class="btn btn-dark">Agregar al carrito</a>
-                    </div>
-                </div>
-                <!-- termino -->
-
-
-                <!-- este div es la terminacion del flex -->
+            <div class="col-xs-6 col-sm-10 col-md-12 col-lg-12 d-flex flex-wrap justify-content-around" id="contenedor">
             </div>
-            <!-- este div es la terminacion del row -->
         </div>
+        <!-- termino contenido -->
+
         <!-- newsletter -->
         <div class="container">
             <div class="row">
@@ -138,6 +80,7 @@
                 </nav>
             </div>
         </div>
+        <!-- termino el formulario -->
     </main>
     <hr>
     <footer class="footer">

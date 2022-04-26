@@ -1,50 +1,38 @@
-/* carrito */ 
-class Producto {
-    constructor(nombre, celular, precio, cantidad) {
-        this.celular= celular
-        this.precio = precio
-        this.cantidad = cantidad
-        this.nombre = nombre
-    }
-}
-/* carrito */  
-let li
-let divCarrito = document.getElementById("carrito")
-let divDelLi =document.getElementById("lista")
-
-function crearDropdown(divi){
-    for (i of JSON.parse(localStorage.getItem("carrito"))){
-        li = document.createElement("li")
-        li.innerHTML = `
-          <div class="filaDelCarrito d-flex justify-content-evenly">
-            <p class="parrafo" >${i.celular}<p>
-            <p class="parrafo" >${i.cantidad} und.<p>
-            <button class="btn" id="btn-eliminar${i.id}"></button>
-            <p class="parrafo">$${i.precio*i.cantidad}<p>
-          <div>
-          `
-        divi.append(li)
-    }
-}
-/* carrito */ 
-function actualizarDom(div, cantidades) {
-    let cantidad = div.querySelector(".cantidad")
-    cantidad.innerHTML = cantidades
-}
-
-function irAlCarrito(producto){
-    let comprar = document.getElementById("boton")
-    comprar.onclick = () => {
-        if (carrito.find((el) => el.nombre == producto.celular)){
-            producto.cantidad++;
-        }
-        else{
-            carrito.push(producto)
-        }
+let productos = [{ id: 1,  nombre: "Celular Samsung A52", precio: 72000, img: "./img/celulares/CGG_Samsung-Galaxy-A52.jpg"},
+                 { id: 2,  nombre: "Celular Samsung A52", precio: 72000, img: "./img/celulares/CGG_Samsung-Galaxy-A52.jpg"},
+                 { id: 3,  nombre: "Celular Samsung A52", precio: 72000, img: "./img/celulares/CGG_Samsung-Galaxy-A52.jpg"},
+                 { id: 4,  nombre: "Celular Samsung A73", precio: 80000, img: "./img/celulares/CGG_Samsung-Galaxy-A52.jpg"},
+                 { id: 5,  nombre: "Celular Samsung A73", precio: 80000, img: "./img/celulares/CGG_Samsung-Galaxy-A52.jpg"},
+                 { id: 6,  nombre: "Celular Samsung A73", precio: 80000, img: "./img/celulares/CGG_Samsung-Galaxy-A52.jpg"}];
+/* para insertar las cards */
+const contenedorProductos = document.getElementById("contenedor")
+/* let carrito*/
+let carrito = [] 
+/* inserte las cards en el html*/
+productos.forEach((producto) => {
+    const div = document.createElement("div")
+    div.innerHTML =  `  
+    <div class="card" style="width: 18rem;">
+    <img src=${producto.img} class="card-img-top" alt="celular">
+    <div class="card-body">
+        <h5 class="card-title">${producto.nombre}</h5>
+        <p class="card-text">$ ${producto.precio}</p>
+        <button id="agregar${producto.id}" class="btn btn-dark">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
+    </div>
+    </div>
     
-    }
-}
+    `
+    contenedorProductos.appendChild(div)
+    
+});
 
+/* hago una funcion para agregar la card al carrito*/
+
+const agregarAlCarrito = (prodId) => {
+    const item = productos.find ((prod) => prod.id === prodId)
+    carrito.push(item)
+    console.log("carrito");
+}
 
 
 
