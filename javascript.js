@@ -25,7 +25,7 @@ productos.forEach((producto) => {
     <div class="card-body">
         <h5 class="card-title">${producto.nombre}</h5>
         <p class="card-text">$ ${producto.precio}</p>
-        <button id="agregar${producto.id}" class="btn btn-dark">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
+        <button id="agregar${producto.id}" class="btn btn-light">Agregar al carrito</button>
     </div>
     </div>
     
