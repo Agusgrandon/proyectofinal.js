@@ -24,23 +24,33 @@ productos.forEach((producto) => {
 
 
 
-/* hago una funcion para agregar la card al carrito*/
-const agregarAlCarrito = (prodId) => {
-    const item = productos.find ((prod) => prod.id === prodId)
-    carrito.push(item)
-    console.log("carrito");
-}
+
 
 /* evento del formulario */ 
 document.getElementById("formulario").addEventListener("submit", function (e) {
     const mail = document.getElementById("mail").value;
     if(mail === ""){
+        
         alert("completa el dato");
+
     } else {
+       
         alert("suscripto!");
+
     }
  
  
     e.preventDefault();
- })
+ });
+
+document.getElementById("myBtn").addEventListener("click", function() {
+
+    Swal.fire({
+        title: 'Genial!',
+        text: 'Haz clickeado el botón!',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+})
+})
+
  /* termino el evento */ 
