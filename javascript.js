@@ -6,7 +6,7 @@ let carrito = []
 productos.forEach((producto) => {
     const div = document.createElement("div")
     div.innerHTML =  `  
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 13rem;">
     <img src=${producto.img} class="card-img-top" alt="celular">
     <div class="card-body">
         <h5 class="card-title">${producto.nombre}</h5>
