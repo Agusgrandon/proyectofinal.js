@@ -1,4 +1,3 @@
-
 /* para insertar las cards */
 const contenedorProductos = document.getElementById("contenedor")
 /* let carrito*/
@@ -20,37 +19,25 @@ productos.forEach((producto) => {
     contenedorProductos.appendChild(div)
 
    
-});
-
-
-
-
+})
 
 /* evento del formulario */ 
 document.getElementById("formulario").addEventListener("submit", function (e) {
     const mail = document.getElementById("mail").value;
     if(mail === ""){
-        
-        alert("completa el dato");
+        /* SweetAlert */ 
+        swal({
+            title: "¡Ingresa el dato solicitado!",
+            icon: "warning",
+          });
 
     } else {
        
-        alert("suscripto!");
-
+        swal({
+            title: "¡Suscripto con éxito!",
+            icon: "success",
+          });
     }
- 
- 
     e.preventDefault();
- });
-
-document.getElementById("myBtn").addEventListener("click", function() {
-
-    Swal.fire({
-        title: 'Genial!',
-        text: 'Haz clickeado el botón!',
-        icon: 'success',
-        confirmButtonText: 'Cool'
-})
-})
-
+ })
  /* termino el evento */ 

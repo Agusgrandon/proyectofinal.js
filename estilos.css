@@ -18,7 +18,7 @@ body{
      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  }
 h2{
-    text-align: left;
+    text-align: center;
     font-size: 20px;
 }
 a{
@@ -39,11 +39,11 @@ a:hover{
     transform: translateY(-3%);
 }
 .card button:hover{
-    background-color: black;
+    background-color: #340856;
     color: white;
 }
 
 .boton:hover{
-    background-color: black;
+    background-color: #340856;
     color: white;
 }
