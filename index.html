@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header> 
+    <header>
         <nav class="navbar navbar-expand-lg navbar-light flex-column">
             <div class="container-fluid flex-column">
                 <h1><a class="navbar-brand" style="font-size: 60px; color: #340856" href="#">TITULO</a></h1>
@@ -23,7 +23,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse col-xs-6 col-md-12 col-lg-12" id="navbarNav">
-                    <ul class="navbar-nav col-xs-6 col-sm-10 col-md-12 col-lg-12 d-flex flex-wrap justify-content-center">
+                    <ul
+                        class="navbar-nav col-xs-6 col-sm-10 col-md-12 col-lg-12 d-flex flex-wrap justify-content-center">
                         <li class="nav-item">
                             <a class="nav-link active" style="color: black;" href="#">Seccion 1</a>
                         </li>
@@ -43,17 +44,26 @@
             <div class="dropdown">
                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    <img src="./img/carrito/79467.png" alt="" style="width: 2em; height: 2em;">
+                    <img src="./img/carrito/carrito2.jpg" alt="" style="width: 2em; height: 2em;">
                 </button>
-                <ul class="dropdown-menu dropdown-menu-end mb-3 border" aria-labelledby="dropdownMenuButton1">
-                    <p class="textoCarrito" style="color: black;">Carrito</p>
-                    <div></div>
-                    <p></p>
-                    <div class="mx-1">
-                        <button class="btn btn-dark" style="width:100%">Finalizar Compra</button>
-                    </div>
-                </ul>
+                <div class="dropdown-menu dropdown-menu-end mb-3 border" id="carrito"
+                    aria-labelledby="dropdownMenuButton1">
+                    <table id="lista-carrito" class="table">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <a href="#" id="procesar-pedido" class="btn btn-outline-success btn-sm">Finalizar compra</a>
+                </div>
             </div>
+            </div>
+            <!-- termino el carrito -->
         </nav>
     </header>
     <br>
@@ -70,12 +80,13 @@
         <!-- newsletter -->
         <div class="container">
             <div class="row">
-                    <div class="container-fluid">
-                        <form class="d-flex" id="formulario">
-                            <input class="form-control me-2" type="email" id="mail" placeholder="Subscribirme a las newsletter" name="mail">
-                            <button class="boton btn btn-secondary" type="submit">Suscribirme</button>
-                        </form>
-                    </div>
+                <div class="container-fluid">
+                    <form class="d-flex" id="formulario">
+                        <input class="form-control me-2" type="email" id="mail"
+                            placeholder="Subscribirme a las newsletter" name="mail">
+                        <button class="boton btn btn-secondary" type="submit">Suscribirme</button>
+                    </form>
+                </div>
             </div>
         </div>
         <!-- termino el formulario -->
@@ -95,8 +106,8 @@
     <!-- links js y bootstrap -->
     <script src="./productos.js"></script>
     <script src="./javascript.js"></script>
-    
-    
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
