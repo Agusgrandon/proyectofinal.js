@@ -31,7 +31,7 @@ class Carrito {
          <td><img src="${producto.imagen}" alt="#" width=50></td>
          <td>${producto.titulo}</td>
          <td>${producto.precio}</td>
-         <td><button class="borrar-producto btn btn-danger" data-id="${producto.id}">Eliminar</button></td>
+         <td><button class="borrar-producto btn btn-outline-danger" data-id="${producto.id}">Eliminar</button></td>
          `;
         listaProductos.appendChild(row);
      }
