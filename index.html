@@ -67,14 +67,23 @@
         </nav>
     </header>
     <br>
-    <main class="container">
+    <main>
         <!-- card para insertar desde js -->
-        <div class="row">
-            <h2 class="col-xs-6 col-md-12">Productos</h2>
-            <div class="col-xs-6 col-sm-10 col-md-12 col-lg-12 d-flex flex-wrap justify-content-around" id="contenedor">
+        <div class="container" id="lista-productos">
+            <div class="row">
+                <!-- card 1 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/fundas/funda1.jpg"
+                        class="card-img-top" alt="foto">
+                    <div class="card-body">
+                        <h5 class="producto" style="color: #71115a;">Funda para celular</h5>
+                        <p class="precio" style="color: #71115a;">$2000</p>
+                        <a href="" class="btn btn-light agregar-carrito" data-id="1">Comprar</a>
+                    </div>
+                </div>
+                <!-- card 2 -->
             </div>
         </div>
-        <br>
         <!-- termino contenido -->
 
         <!-- newsletter -->
@@ -104,10 +113,8 @@
     </footer>
 
     <!-- links js y bootstrap -->
-    <script src="./productos.js"></script>
-    <script src="./javascript.js"></script>
-
-
+    <script src="./java1.js"></script>
+    <script src="./java2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

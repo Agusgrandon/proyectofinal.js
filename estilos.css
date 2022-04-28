@@ -38,7 +38,7 @@ a:hover{
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
     transform: translateY(-3%);
 }
-.card button:hover{
+.card a:hover{
     background-color: #340856;
     color: white;
 }
