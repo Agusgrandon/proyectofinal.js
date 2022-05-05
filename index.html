@@ -16,6 +16,12 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light flex-column">
+            <div class="container-fluid">
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                </form>
+              </div>
             <div class="container-fluid flex-column">
                 <h1><a class="navbar-brand" style="font-size: 60px; color: #340856" href="#">TITULO</a></h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -26,16 +32,13 @@
                     <ul
                         class="navbar-nav col-xs-6 col-sm-10 col-md-12 col-lg-12 d-flex flex-wrap justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Seccion 1</a>
+                            <a class="nav-link active" style="color: #340856;" href="#">Fundas //</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Seccion 2</a>
+                            <a class="nav-link active" style="color: #340856;" href="#">Vidrio templado //</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Seccion 3</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Seccion 4</a>
+                            <a class="nav-link active" style="color: #340856;" href="#">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -65,19 +68,62 @@
             </div>
             <!-- termino el carrito -->
         </nav>
+        <hr>
     </header>
     <br>
     <main> 
         <div class="container" id="lista-productos">
             <div class="row">
-                <h2 class="col-xs-6 col-md-12">Productos</h2>
+                <!-- carrusel -->
+                <h2 class="col-xs-6 col-md-12">Novedades</h2>
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="./img/fundas/funda2.jpg" class="rounded mx-auto d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Funda</h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./img/fundas/funda1.jpg" class="rounded mx-auto d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Funda</h5>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/fundas/funda2.jpg" class="rounded mx-auto d-block" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Funda</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+
+
+
+                <!-- termina carrusel -->
+                <h3 class="col-xs-6 col-md-12">Productos</h2>
                 <div class="col-xs-6 col-sm-10 col-md-12 col-lg-12 d-flex flex-wrap justify-content-around">
                 <!-- card 1 -->
                 <div class="card" style="width: 18rem;">
                     <img src="./img/fundas/funda7.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
-                        <h5 class="producto text-center" style="color: #71115a;">Funda para celular</h5>
-                        <p class="precio text-center" style="color: #71115a;">$2000</p>
+                        <h5 class="producto text-center">Funda para celular</h5>
+                        <p class="precio text-center">$2000</p>
                         <a href="" class="btn btn-light agregar-carrito" data-id="1">Comprar</a>
                     </div>
                 </div>
@@ -85,8 +131,8 @@
                 <div class="card" style="width: 18rem;">
                     <img src="./img/fundas/funda9.webp" class="card-img-top" alt="foto">
                     <div class="card-body">
-                        <h5 class="producto text-center" style="color: #71115a;">Funda para celular</h5>
-                        <p class="precio text-center" style="color: #71115a;">$2000</p>
+                        <h5 class="producto text-center">Funda para celular</h5>
+                        <p class="precio text-center">$2000</p>
                         <a href="" class="btn btn-light agregar-carrito" data-id="1">Comprar</a>
                     </div>
                 </div>
@@ -94,8 +140,8 @@
                 <div class="card" style="width: 18rem;">
                     <img src="./img/fundas/funda3.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
-                        <h5 class="producto text-center" style="color: #71115a;">Funda para celular</h5>
-                        <p class="precio text-center" style="color: #71115a;">$2000</p>
+                        <h5 class="producto text-center">Funda para celular</h5>
+                        <p class="precio text-center">$2000</p>
                         <a href="" class="btn btn-light agregar-carrito" data-id="1">Comprar</a>
                     </div>
                 </div>
@@ -103,8 +149,8 @@
                 <div class="card" style="width: 18rem;">
                     <img src="./img/fundas/funda4.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
-                        <h5 class="producto text-center" style="color: #71115a;">Funda para celular</h5>
-                        <p class="precio text-center" style="color: #71115a;">$2000</p>
+                        <h5 class="producto text-center">Funda para celular</h5>
+                        <p class="precio text-center">$2000</p>
                         <a href="" class="btn btn-light agregar-carrito" data-id="1">Comprar</a>
                     </div>
                 </div>
@@ -112,8 +158,8 @@
                 <div class="card" style="width: 18rem;">
                     <img src="./img/fundas/funda5.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
-                        <h5 class="producto text-center" style="color: #71115a;">Funda para celular</h5>
-                        <p class="precio text-center" style="color: #71115a;">$2000</p>
+                        <h5 class="producto text-center">Funda para celular</h5>
+                        <p class="precio text-center">$2000</p>
                         <a href="" class="btn btn-light agregar-carrito" data-id="1">Comprar</a>
                     </div>
                 </div>
@@ -121,8 +167,8 @@
                 <div class="card" style="width: 18rem;">
                     <img src="./img/fundas/funda6.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
-                        <h5 class="producto text-center" style="color: #71115a;">Funda para celular</h5>
-                        <p class="precio text-center" style="color: #71115a;">$2000</p>
+                        <h5 class="producto text-center">Funda para celular</h5>
+                        <p class="precio text-center">$2000</p>
                         <a href="" class="btn btn-light agregar-carrito" data-id="1">Comprar</a>
                     </div>
                 </div>
