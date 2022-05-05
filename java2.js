@@ -31,6 +31,18 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
             icon: "success",
           });
     }
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+           mail:"mail",
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+
     e.preventDefault();
  })
  /* termino el evento */ 
