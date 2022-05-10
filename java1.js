@@ -34,6 +34,8 @@ class Carrito {
          <td><button class="borrar-producto btn btn-outline-danger" data-id="${producto.id}">Eliminar</button></td>
          `;
         listaProductos.appendChild(row);
+        /* para guardarlo */ 
+        this.guardarProductoEnLocalStorage(producto);
      }
     /* para que eliminar producto del carrito */ 
     eliminarProducto(e){
@@ -45,5 +47,22 @@ class Carrito {
         }
         
     }
+
+/* guardar los productos */ 
+guardarProductoEnLocalStorage(producto){
+    let productos;
+    productos = this.obtenerProductoEnLocalStorage();
+    productos.push(producto);
+    localStorage.setItem('productos', JSON.stringify(productos));
 }
-   
+obtenerProductoDelLocalStorage(){
+    let productoLS;
+    if(localStorage.getItem('productos') == null){
+        productoLS = [];
+    }
+    else {
+        productoLS = JSON.parse(localStorage.getItem('productos'));
+    }
+    return productoLS;
+}
+} 
