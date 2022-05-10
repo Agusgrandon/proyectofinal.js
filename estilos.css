@@ -36,6 +36,11 @@ p{
     color: #340856;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+ion-icon {
+    color: #340856;
+    font-size: 30px;
+    text-align: center;
+  }
 a{
     text-decoration: none;
     color: #340856;
