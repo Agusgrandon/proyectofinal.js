@@ -47,22 +47,12 @@ class Carrito {
         }
         
     }
+    vaciarCarrito(e){
+        e.preventDefault();
+        while(listaProductos.firstChild){
+            listaProductos.removeChild(listaProductos.firstChild);
+        }
+        return false;
+    }
 
-/* guardar los productos */ 
-guardarProductoEnLocalStorage(producto){
-    let productos;
-    productos = this.obtenerProductoEnLocalStorage();
-    productos.push(producto);
-    localStorage.setItem('productos', JSON.stringify(productos));
 }
-obtenerProductoDelLocalStorage(){
-    let productoLS;
-    if(localStorage.getItem('productos') == null){
-        productoLS = [];
-    }
-    else {
-        productoLS = JSON.parse(localStorage.getItem('productos'));
-    }
-    return productoLS;
-}
-} 
