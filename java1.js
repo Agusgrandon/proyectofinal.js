@@ -46,6 +46,7 @@ class Carrito {
             productoID = producto.querySelector("a");
         }
         this.eliminarProductoLocalStorage(productoID);
+        this.calcularTotal();
     }
     vaciarCarrito(e){
         e.preventDefault();
@@ -133,19 +134,16 @@ procesarPedido(e){
 /* para calcular el total */
 calcularTotal(){
     let productosLS;
-    let total = 0, igv = 0, subtotal = 0;
+    let total = 0, subtotal = 0;
     productosLS = this.obtenerProductosLocalStorage();
     for(let i = 0; i < productosLS.length; i++){
         let element = Number(productosLS[i].precio * productosLS[i].cantidad);
         total = total + element;
-        
-    }
-    subtotal = parseFloat(total-igv).toFixed(2);
-
+        }
+    subtotal = parseFloat(total).toFixed(2);
     document.getElementById("subtotal").innerHTML = " " + subtotal;
     document.getElementById("total").value = " " + total.toFixed(2);
 }
-
 
 
 }
