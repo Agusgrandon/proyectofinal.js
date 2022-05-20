@@ -13,6 +13,7 @@ function finalizarCompra() {
     compra.calcularTotal();
 }
 
+/* para finalizar la compra */
 document.getElementById("procesar-pago").addEventListener("submit", function (e) {
     const nombre = document.getElementById("nombre").value;
     const email = document.getElementById("email").value;

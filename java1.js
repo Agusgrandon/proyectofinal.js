@@ -18,6 +18,7 @@ class Carrito {
             imagen : producto.querySelector("img").src,
             titulo: producto.querySelector("h5").textContent,
             precio: producto.querySelector(".precio").textContent,
+            modelo: producto.querySelector(".modelo").textContent,
             id: producto.querySelector('a').getAttribute('data-id'),
             cantidad: 1
         }
@@ -30,6 +31,7 @@ class Carrito {
          <td><img src="${producto.imagen}" alt="#" width=50></td>
          <td>${producto.titulo}</td>
          <td>${producto.precio}</td>
+         <td>${producto.modelo}</td>
          <td><button class="borrar-producto btn btn-outline-danger" data-id="${producto.id}">Eliminar</button></td>
          `;
         listaProductos.appendChild(row);
@@ -95,6 +97,7 @@ leerLocalStorage(){
          <td><img src="${producto.imagen}" alt="#" width=50></td>
          <td>${producto.titulo}</td>
          <td>${producto.precio}</td>
+         <td>${producto.modelo}</td>
          <td><button class="borrar-producto btn btn-outline-danger" data-id="${producto.id}">Eliminar</button></td>
          `;
         listaProductos.appendChild(row);
@@ -110,6 +113,7 @@ leerLocalStorageCompra(){
          <td><img src="${producto.imagen}" alt="#" width=50></td>
          <td>${producto.titulo}</td>
          <td>${producto.precio}</td>
+         <td>${producto.modelo}</td>
          <td><input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}></td>
          <td>${producto.precio * producto.cantidad}</td>
          <td><button class="borrar-producto btn btn-outline-danger" data-id="${producto.id}">Eliminar</button></td>

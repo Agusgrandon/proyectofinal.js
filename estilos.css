@@ -36,6 +36,11 @@ p{
     color: #340856;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.modelo{
+    font-weight: lighter;
+    text-align: center;
+    color: black;
+}
 ion-icon {
     color: #340856;
     font-size: 30px;
@@ -69,6 +74,6 @@ a:hover{
 }
 
 .boton:hover{
-    background-color: #340856;
+    background-color: #89d631;
     color: white;
 }
