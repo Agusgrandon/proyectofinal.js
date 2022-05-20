@@ -18,13 +18,19 @@ h1{
  }
 h2{
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 15px;
+    border: none ;
+    margin: 40px;
 }
 h3{
     font-weight: bold;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 15px;
+    border: none ;
+    margin: 15px;
 }
 h5{
     font-weight: bold;
@@ -74,6 +80,6 @@ a:hover{
 }
 
 .boton:hover{
-    background-color: #89d631;
+    background-color: #340856;
     color: white;
 }
