@@ -36,7 +36,7 @@ document.getElementById("procesar-pago").addEventListener("submit", function (e)
    
         swal({
             title: "¡Compra realizada con éxito",
-            text: "Te enviamos a tu mail el detalle de tu compra",
+            text: "Te enviamos al mail el detalle de tu compra",
             icon: "success",
             button: "Cerrar",
           });
