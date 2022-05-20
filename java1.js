@@ -83,7 +83,7 @@ eliminarProductoLocalStorage(productoID){
             productosLS.splice(index, 1);
         }
     });
-    localStorage.setItem('productos', JSON.stringify(productosLS));
+    localStorage.setItem("productos", JSON.stringify(productosLS));
 }
  /* si se actualiza, el carrito no se pierde */
 leerLocalStorage(){
