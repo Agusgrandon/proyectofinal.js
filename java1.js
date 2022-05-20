@@ -99,22 +99,54 @@ leerLocalStorage(){
         listaProductos.appendChild(row);
     });
 }
+/* para que aparesca en compra.html */
+leerLocalStorageCompra(){
+    let productosLS;
+    productosLS = this.obtenerProductosLocalStorage();
+    productosLS.forEach(function (producto){
+        const row = document.createElement("tr");
+         row.innerHTML =  ` 
+         <td><img src="${producto.imagen}" alt="#" width=50></td>
+         <td>${producto.titulo}</td>
+         <td>${producto.precio}</td>
+         <td><input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}></td>
+         <td>${producto.precio * producto.cantidad}</td>
+         <td><button class="borrar-producto btn btn-outline-danger" data-id="${producto.id}">Eliminar</button></td>
+         `;
+        listaCompra.appendChild(row);
+    });
+}
 vaciarLocalStorage(){
     localStorage.clear();
 }
+
 /* link para que te lleve a compra.html */
 procesarPedido(e){
     e.preventDefault();
     if(this.obtenerProductosLocalStorage().length === 0){
         /* SweetAlert */ 
-        swal({
-            title: "¡Tu pedido esta vacio!",
-            icon: "warning",
-          });
+        swal("¡Tu pedido esta vacio!");
         } else {
         location.href = "compra.html";
     }
 }
+/* para calcular el total */
+calcularTotal(){
+    let productosLS;
+    let total = 0, igv = 0, subtotal = 0;
+    productosLS = this.obtenerProductosLocalStorage();
+    for(let i = 0; i < productosLS.length; i++){
+        let element = Number(productosLS[i].precio * productosLS[i].cantidad);
+        total = total + element;
+        
+    }
+    subtotal = parseFloat(total-igv).toFixed(2);
+
+    document.getElementById("subtotal").innerHTML = " " + subtotal;
+    document.getElementById("total").value = " " + total.toFixed(2);
+}
+
+
 
 }
 

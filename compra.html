@@ -63,7 +63,55 @@
                 <div class="col">
                     <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
                     <form class="row g-3" id="procesar-pago" action="#" method="post">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div id="carrito" class="form-group table-responsive">
+                            <table class="table" id="lista-compra">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Sub Total</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
 
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                    <th scope="col">
+                                        <p class="letraP" id="subtotal"></p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                    <th scope="col">
+                                        <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                                    </th>
+                                </tr>
+
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-4 mb-2">
+                                <a href="index.html" class="btn btn-outline-info">Seguir comprando</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <button href="#" class="btn btn-outline-success" id="procesar-compra">Realizar
+                                    compra</button>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Nombre</label>
                             <input type="text" class="form-control" placeholder="ingresa tu nombre" name="nombre">
@@ -72,7 +120,7 @@
                             <label for="inputPassword4" class="form-label">Apellido</label>
                             <input type="text" class="form-control" placeholder="ingresa tu apellido" name="apellido">
                         </div>
-                        
+
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Email</label>
                             <input type="email" class="form-control" placeholder="ingresa tu mail" name="mail">
@@ -108,64 +156,23 @@
                                 <option selected>Efectivo</option>
                             </select>
                         </div>
-                     
-
-                        <div id="carrito" class="form-group table-responsive">
-                            <table class="table" id="lista-compra">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Imagen</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Precio</th>
-                                        <th scope="col">Cantidad</th>
-                                        <th scope="col">Sub Total</th>
-                                        <th scope="col">Eliminar</th>
-                                    </tr>
-
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                                <tr>
-                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
-                                    <th scope="col">
-                                        <p id="subtotal"></p>
-                                    </th>
-                                    <!-- <th scope="col"></th> -->
-                                </tr>
-                                <tr>
-                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
-                                    <th scope="col">
-                                        <input id="total" name="monto" class="font-weight-bold border-0" readonly
-                                            style="background-color: white;"></input>
-                                    </th>
-                                    <!-- <th scope="col"></th> -->
-                                </tr>
-
-                            </table>
-                        </div>
-
-                        <div class="row justify-content-between">
-                            <div class="col-md-4 mb-2">
-                                <a href="index.html" class="btn btn-outline-info">Seguir comprando</a>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <button href="#" class="btn btn-outline-success" id="procesar-compra">Realizar
-                                    compra</button>
-                            </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">Medio de pago</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Efectivo</option>
+                            </select>
                         </div>
                     </form>
-
-
                 </div>
-
-
             </div>
-
         </div>
     </main>
 
     <footer class="footer">
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <div class="row justify-content-between align-items-center row-contenedor">
             <a href="#" class="col-md-12 text-center">Instagram</a>

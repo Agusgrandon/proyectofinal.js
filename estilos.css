@@ -49,6 +49,10 @@ a{
 a:hover{
     color: black;
 }
+.letraP{
+    color: black;
+    font-weight: normal;
+}
 
 .card{
     margin: 20px;
