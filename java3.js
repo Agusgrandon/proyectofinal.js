@@ -45,6 +45,10 @@ document.getElementById("procesar-pago").addEventListener("submit", function (e)
         method: 'POST',
         body: JSON.stringify({
            mail:"mail",
+           nombre:"nombre",
+           apellido:"apellido",
+           telefono:"telefono",
+           domicilio:"domicilio",
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
