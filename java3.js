@@ -43,7 +43,7 @@ document.getElementById("procesar-pago").addEventListener("submit", function (e)
           setTimeout(() => {
             compra.vaciarLocalStorage();
             window.location = "index.html";
-        }, 6000);
+        }, 8000);
    
     }
     fetch('https://jsonplaceholder.typicode.com/posts', {

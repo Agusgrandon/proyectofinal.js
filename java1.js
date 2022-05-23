@@ -48,7 +48,6 @@ class Carrito {
             productoID = producto.querySelector("a");
         }
         this.eliminarProductoLocalStorage(productoID);
-        this.calcularTotal();
     }
     vaciarCarrito(e){
         e.preventDefault();
@@ -147,7 +146,5 @@ calcularTotal(){
     document.getElementById("subtotal").innerHTML = " " + subtotal;
     document.getElementById("total").value = " " + total.toFixed(2);
 }
-
-
 }
 
