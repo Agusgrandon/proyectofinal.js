@@ -19,23 +19,10 @@ class Carrito {
             titulo: producto.querySelector("h5").textContent,
             precio: producto.querySelector(".precio").textContent,
             modelo: producto.querySelector(".modelo").textContent,
-            id: producto.querySelector('a').getAttribute('data-id'),
+            id: producto.querySelector("a"),
             cantidad: 1
-        } /* solo se puede agregar un solo producto */ 
-        let productosLS;
-        productosLS = this.obtenerProductosLocalStorage();
-        productosLS.forEach(function (productoLS){
-            if(productoLS.id === infoProducto.id){
-                productosLS = productoLS.id;
-            }
-        });
-
-        if(productosLS === infoProducto.id){
-            swal("¡Producto ya agregado al carrito!");
-        }
-        else {
-            this.insertarCarrito(infoProducto);
-        }
+        } 
+        this.insertarCarrito(infoProducto);
     }
      /* para que aparesca en el carrito */ 
      insertarCarrito(producto){
@@ -127,7 +114,6 @@ leerLocalStorageCompra(){
          <td>${producto.titulo}</td>
          <td>${producto.precio}</td>
          <td>${producto.modelo}</td>
-         <td><input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}></td>
          <td>${producto.precio * producto.cantidad}</td>
          <td><button class="borrar-producto btn btn-outline-danger" data-id="${producto.id}">Eliminar</button></td>
          `;

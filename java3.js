@@ -40,6 +40,11 @@ document.getElementById("procesar-pago").addEventListener("submit", function (e)
             icon: "success",
             button: "Cerrar",
           });
+          setTimeout(() => {
+            compra.vaciarLocalStorage();
+            window.location = "index.html";
+        }, 6000);
+   
     }
     fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
